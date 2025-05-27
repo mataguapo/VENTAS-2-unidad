@@ -38,6 +38,7 @@ public class VentCarritoService{
     public VentCarrito buscarEntidad(Long id) {
         return ventCarritoRepository.findById(id).orElse(null);
     }
+
     public List<VentCarrito> listaCarritoCliente(String dni) {
         return ventCarritoRepository.listaCarritoCliente(dni);
     }
@@ -46,4 +47,5 @@ public class VentCarritoService{
     public void deleteCarAll(String dniruc) {
         ventCarritoRepository.deleteByDniruc(dniruc);
     }
+
 }
